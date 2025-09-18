@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Mojo UK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .program-card {
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">Money Mojo UK</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section class="text-center py-20 bg-white rounded-3xl shadow-lg mb-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-indigo-800 leading-tight mb-4">
+                Boost Your Bank Account: <br>Your Guide to Referral Riches
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Discover the best referral programs to make extra money online. We've compiled a list of top financial and lifestyle services to help you.
+            </p>
+        </section>
+
+        <!-- Referral Programs Section -->
+        <section id="referrals" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-indigo-800">Top Referral Programs</h2>
+            <div id="program-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Modal for Detailed Information -->
+        <div id="program-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden flex items-center justify-center p-4 z-50">
+            <div class="bg-white rounded-2xl shadow-xl w-full max-w-3xl p-8 relative">
+                <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+                <div id="modal-content" class="overflow-y-auto max-h-[80vh]">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer Section -->
+        <section id="disclaimer" class="py-12 bg-gray-200 rounded-2xl text-center text-sm text-gray-600 mt-12">
+            <h3 class="font-bold mb-2">Important Disclaimers</h3>
+            <p class="max-w-3xl mx-auto">
+                **Not Financial Advice:** The information provided on this website is for informational purposes only and does not constitute financial advice. We do not provide financial services. You should always conduct your own research and seek professional advice before making any financial decisions.
+            </p>
+            <p class="max-w-3xl mx-auto mt-2">
+                **Referral Links:** We may earn a commission from the companies mentioned on this site when you use our referral links to sign up. This helps support the website and allows us to provide this content for free.
+            </p>
+            <p class="max-w-3xl mx-auto mt-2">
+                **Capital at Risk:** All investing involves risk. When you invest, your capital is at risk. The value of investments can go down as well as up.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center px-6">
+            <p class="text-sm">© 2025 Money Mojo UK. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const programs = [
+            {
+                name: "Penfold",
+                description: "A simple and transparent pension provider. Get a bonus when you and a friend both invest.",
+                details: "Penfold is a digital pension provider that makes it easy to save for retirement. Their referral program offers a **free £25** which is added directly into your pension when you and a friend both make your first contribution. This is a great way to start building your pension with a boost from a referral. **Guidance:** Ensure your friend understands the pension rules, as a pension is a long-term investment and withdrawals are not typically allowed until a certain age. Note: The specific bonus amount may vary.",
+                referralLink: "#",
+                icon: `<div class="relative w-12 h-12 mb-4">
+                            <svg class="w-full h-full text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <span class="absolute -top-3 -right-3 bg-indigo-600 text-white font-extrabold text-lg px-3 py-1 rounded-full border-2 border-white shadow-md">£25</span>
+                        </div>`
+            },
+            {
+                name: "Swagbucks",
+                description: "Earn points for everyday activities like shopping online, watching videos, and answering surveys. Redeem points for cash or gift cards.",
+                details: "Swagbucks is a popular rewards and loyalty program. You can earn points (called SB) for completing various tasks. Their referral program gives you a bonus when a friend signs up and earns their first points, plus a percentage of their future earnings. **Guidance:** Encourage your friends to use the Swagbucks browser extension to ensure all their eligible activities are tracked.",
+                referralLink: "#",
+                icon: `<svg class="w-12 h-12 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.485 0-4.5 2.015-4.5 4.5S9.515 17 12 17s4.5-2.015 4.5-4.5S14.485 8 12 8zM12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>`
+            },
+            {
+                name: "Robinhood (US)",
+                description: "A US-based stock trading app with a referral program that gives new users a free stock.",
+                details: "While this app is popular in the US, it is not available to UK residents. This is an example of a program that is widely known but would not be suitable for a UK-focused website. **Guidance:** Always check the geographical eligibility of a referral program before promoting it to ensure your audience can actually benefit from it.",
+                referralLink: "#",
+                icon: `<svg class="w-12 h-12 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>`
+            }
+        ];
+
+        const programList = document.getElementById('program-list');
+        const programModal = document.getElementById('program-modal');
+        const closeModal = document.getElementById('close-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        programs.forEach(program => {
+            const card = document.createElement('div');
+            card.className = "program-card bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center";
+            card.innerHTML = `
+                ${program.icon}
+                <h3 class="text-xl font-semibold mb-2 text-indigo-800">${program.name}</h3>
+                <p class="text-gray-600 mb-4">${program.description}</p>
+                <button class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors">Learn More</button>
+            `;
+            card.addEventListener('click', () => showModal(program));
+            programList.appendChild(card);
+        });
+
+        function showModal(program) {
+            modalContent.innerHTML = `
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">${program.icon}</div>
+                    <h2 class="text-3xl font-bold text-indigo-800 mb-4">${program.name}</h2>
+                </div>
+                <div class="prose max-w-none text-gray-700">
+                    <p>${program.details}</p>
+                    <a href="${program.referralLink}" target="_blank" class="block w-full text-center bg-green-500 text-white font-bold py-3 mt-8 rounded-full shadow-lg hover:bg-green-600 transition-colors">Get My Referral!</a>
+                </div>
+            `;
+            programModal.classList.remove('hidden');
+        }
+
+        closeModal.addEventListener('click', () => {
+            programModal.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === programModal) {
+                programModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
