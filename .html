@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Money Online - Affiliate Hub</title>
+    <!-- SEO Enhancements -->
+    <meta name="description" content="Discover top-rated referral programs and affiliate links to earn money online. Join Swagbucks, Penfold, and more to start your earning journey today.">
+    <meta name="keywords" content="make money online, affiliate marketing, referral programs, Swagbucks, Penfold, earn money, passive income, finance">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(to right, #4c51bf, #6b46c1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4 sm:p-6">
+
+    <div class="container mx-auto max-w-4xl p-4 bg-white rounded-3xl shadow-2xl space-y-8">
+
+        <!-- Header Section -->
+        <header class="text-center p-6 gradient-bg rounded-2xl text-white shadow-lg">
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-2">Your Money-Making Hub</h1>
+            <p class="text-lg sm:text-xl font-medium opacity-90">Unlock Your Earning Potential with Top Referral Programs</p>
+        </header>
+
+        <!-- Sort Button -->
+        <div class="flex justify-end pr-4">
+            <button onclick="sortOffers()" class="px-6 py-2 bg-gray-500 text-white font-semibold rounded-full shadow-md hover:bg-gray-600 transition-colors duration-200">
+                Sort by Value
+            </button>
+        </div>
+
+        <!-- Main Content Container -->
+        <main id="offer-container" class="space-y-12">
+
+            <!-- Swagbucks Section -->
+            <!-- Note: The initial prompt specified a £25 + 250 bonus, which is a significant value.
+                 This is represented here by a data-value of 50. You can change this value to
+                 match the actual offer. -->
+            <section class="flex flex-col sm:flex-row items-center bg-white p-6 rounded-2xl shadow-xl transition-transform duration-300 card-hover" data-value="50">
+                <div class="flex-shrink-0 w-24 h-24 mb-4 sm:mb-0 sm:mr-6">
+                    <!-- Swagbucks Icon -->
+                    <img src="https://placehold.co/96x96/6b46c1/ffffff?text=SB" alt="Swagbucks Icon" class="w-full h-full rounded-2xl">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Earn with Swagbucks</h2>
+                    <p class="text-gray-600 mb-4">
+                        Join Swagbucks for free and earn rewards for things you already do online, like shopping, watching videos, and taking surveys.
+                        Get a bonus when you sign up!
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <button onclick="copyToClipboard('https://www.swagbucks.com/referral-link')" 
+                                class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-200">
+                            Copy Swagbucks Link
+                        </button>
+                        <a href="#" target="_blank" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Penfold Section -->
+            <section class="flex flex-col sm:flex-row items-center bg-white p-6 rounded-2xl shadow-xl transition-transform duration-300 card-hover" data-value="25">
+                <div class="flex-shrink-0 w-24 h-24 mb-4 sm:mb-0 sm:mr-6">
+                    <!-- Penfold Icon -->
+                    <img src="https://placehold.co/96x96/4c51bf/ffffff?text=PF" alt="Penfold Icon" class="w-full h-full rounded-2xl">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Invest with Penfold</h2>
+                    <p class="text-gray-600 mb-4">
+                        Penfold makes it easy to save for your retirement with a flexible, modern pension plan. Get a special
+                        bonus when you start saving.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <button onclick="copyToClipboard('https://www.penfold.com/referral-link')"
+                                class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-200">
+                            Copy Penfold Link
+                        </button>
+                        <a href="#" target="_blank" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Revolut Section -->
+            <section class="flex flex-col sm:flex-row items-center bg-white p-6 rounded-2xl shadow-xl transition-transform duration-300 card-hover" data-value="20">
+                <div class="flex-shrink-0 w-24 h-24 mb-4 sm:mb-0 sm:mr-6">
+                    <!-- Revolut Icon -->
+                    <img src="https://placehold.co/96x96/ff4136/ffffff?text=Revolut" alt="Revolut Icon" class="w-full h-full rounded-2xl">
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Get a Bonus with Revolut</h2>
+                    <p class="text-gray-600 mb-4">
+                        Revolut is a financial app that helps you manage your money easily. Sign up and make a £1 transaction to get a £20 cash bonus!
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <button onclick="copyToClipboard('https://www.revolut.com/revolut-sziget-cash-reward')"
+                                class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-200">
+                            Copy Revolut Link
+                        </button>
+                        <a href="https://www.revolut.com/refer-a-friend-terms" target="_blank" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Message Box for User Feedback -->
+        <div id="messageBox" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-sm px-4 py-2 rounded-lg shadow-lg z-50">
+            Link copied to clipboard!
+        </div>
+    </div>
+
+    <script>
+        // Function to copy text to the clipboard and show a message
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = text;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Show a temporary message to the user
+            const messageBox = document.getElementById('messageBox');
+            messageBox.classList.remove('hidden');
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 2000);
+        }
+
+        // Function to sort the offer cards
+        function sortOffers() {
+            const container = document.getElementById('offer-container');
+            const offers = Array.from(container.querySelectorAll('section'));
+            
+            // Sort the array in descending order based on the data-value attribute
+            offers.sort((a, b) => {
+                const valueA = parseInt(a.dataset.value, 10);
+                const valueB = parseInt(b.dataset.value, 10);
+                return valueB - valueA;
+            });
+            
+            // Re-append the sorted offers to the container
+            offers.forEach(offer => {
+                container.appendChild(offer);
+            });
+        }
+    </script>
+
+</body>
+</html>
