@@ -16,14 +16,23 @@
             font-family: 'Inter', sans-serif;
         }
         /* Simple animation for cards on hover */
-        .referral-card {
+       .referral-card {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
-        .referral-card:hover {
+       .referral-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4SRYCJZEG"></script>
+    <script>
+      window.dataLayer = window.dataLayer ||;
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M4SRYCJZEG');
+    </script>
 </head>
 <body class="bg-slate-50 text-gray-800">
 
@@ -99,7 +108,7 @@
                 </div>
                 <div class="referral-card bg-white rounded-xl shadow-md p-6 flex flex-col">
                     <div class="flex-shrink-0 mb-4">
-                        <svg class="h-10 w-10 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                        <svg class="h-10 w-10 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3.512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3.512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
                     </div>
                     <h4 class="text-xl font-bold mb-2">TopCashback</h4>
                     <p class="text-3xl font-extrabold text-orange-500 mb-3">Up to £25 Bonus</p>
@@ -122,14 +131,4 @@
     </footer>
 
 </body>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4SRYCJZEG"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-M4SRYCJZEG');
-</script>
 </html>
-
-
